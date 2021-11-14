@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bai 2
+    let array = [1, 4, 6, 8, 9, 10, 11, 12, 14, 3]
+    let i
+    let max = +''
+
+    for (i = 0; i < array.length;) {
+        array[0] = max;
+
+        if (array[i] > max) {
+            max = array[i]
+
+        }
+        i++
+    }
+    console.log(max)
+</script>
+</body>
+</html>
