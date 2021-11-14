@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [
+        {id: 1, name: 'Tran Van A', age: 30},
+        {id: 2, name: 'Nguyexn Van B', age: 24},
+        {id: 3, name: 'Ha Quang Loc', age: 39}
+    ]
+    // console.log(array)
+    let u = array.join()
+    console.log(u)
+    let array2 = [
+        {
+            id: 4,
+            name: 'Thai Thi Duyen',
+            age: 23
+        },
+        {
+            id: 5,
+            name: 'Hoang Dinh phong',
+        }
+    ]
+
+    // let a = array.concat(array2)
+    // console.log(a)
+    // let b = array + array2
+    // console.log(b)
+    // c = [1,2,3,4,5,6,7,8]
+    // d = c.indexOf(5)
+    // console.log(d)
+    // e = c.indexOf(9)
+    // console.log(e)
+    // f = array.indexOf(id: 1)
+    // console.log(f)
+    let a = [1,2,3,4,5,6]
+
+    a.includes(2)  // true
+
+    a.includes(2,1)  // false
+
+    a.includes(5,-2)  // true
+    a.includes(5,-1)  // false
+</script>
+</body>
+</html>

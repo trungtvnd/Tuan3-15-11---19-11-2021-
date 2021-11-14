@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bai 1
+    // let myColor = ["Red", "Green", "White", "Black"]
+    // let new_color = myColor.join()
+    // let c = myColor.toString()
+    // console.log(new_color)
+    // console.log(c)
+
+// Bai 2
+
+    // let num = +prompt('Input 1 số có nhiều chữ số')
+    // let array = []
+    // array.push(num)
+    // alert(array)
+    //
+    // let a = array[0].toString()
+    // // console.log(typeof a)
+    // // document.write(a)
+    // let add = '-'
+    // let result = ''
+    // for(let i = 0; i < a.length; i++) {
+    //     if (a[i] % 2 === 0 && a[i + 1] % 2 === 0) {
+    //         result =  a.slice(0, i + 1) + add + a.slice(i + 1);
+    //         a = result
+    //     }
+    // }
+    // document.write(result)
+
+    // Bai 3
+
+    let str = 'The Quick Brown Fox';
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+
+    for(let x=0; x<str.length; x++)
+    {
+        if(UPPER.indexOf(str[x]) !== -1)
+        {
+            result.push(str[x].toLowerCase());
+        }
+        else if(LOWER.indexOf(str[x]) !== -1)
+        {
+            result.push(str[x].toUpperCase());
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+    console.log(result.join(''));
+
+</script
+>
+</body>
+</html>
