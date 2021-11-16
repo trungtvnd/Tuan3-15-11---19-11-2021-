@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking Textarea on Typing</title>
+</head>
+<body onload="fake()" style="text-align: center">
+
+<form>
+    <label><textarea name="" id="text" cols="30" rows="5"></textarea></label>
+</form>
+<script>
+    let str = '';
+    let array = ['','T', 'Ô', 'I', 'L', 'À', 'M', 'Ộ', 'T', 'T', 'H', 'Ằ', 'N', 'G', 'N', 'G', 'Ố', 'C']
+    function fake() {
+        let text = document.getElementById('text').value
+        let j = text.length;
+        if (j > 0) {
+            for (let i = 0; i <= j; i++) {
+                str = str + array[i]
+                if (i === 18) {
+                    document.getElementById('text').value = '';
+                    str = ''
+                }
+            }
+        }
+        document.getElementById('text').value = str;
+        str = ''
+        setTimeout('fake()', 1);
+
+    }
+</script>
+
+</body>
+</html>
