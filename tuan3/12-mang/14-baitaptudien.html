@@ -20,16 +20,19 @@ Tu tra cuu: <label><input type="text" id="input"></label>
 <script>
 let eng = ['table', 'girl', 'boy', 'love', 'baby']
 let vn = ['Cai ban', ' Con gai', 'Con trai', 'yeu', 'Em be']
-let i = 0
+
 function check() {
-    for (i = 0; i < eng.length; i ++) {
-        a = (document.getElementById('input').value).toLowerCase()
-        if (eng[i] === a){
-            document.getElementById('tracuu').innerText = 'Result là: ' + vn[i]
-
-        }
+    let flag = false
+    let a = document.getElementById('input').value
+    let b = eng.indexOf(a)
+    if (b !== -1){
+        flag = true
     }
-
+    if (flag) {
+        document.getElementById('tracuu').innerHTML = vn[b]
+    }else{
+        document.getElementById('tracuu').innerHTML = 'we can not find your word'
+    }
 }
 </script>
 
