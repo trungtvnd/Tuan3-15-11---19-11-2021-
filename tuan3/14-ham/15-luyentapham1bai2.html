@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="check()" value="ClickMe">ClickMe</button>
+<script>
+    let flag = true
+    function check() {
+        let a = +prompt('Input a number')
+
+        if (isNaN(a)){
+            flag = false
+            a = a +1
+
+        }
+       if (flag){
+           alert(a + 1)
+
+       }else {
+           alert('You must input a number')
+
+       }
+
+    }
+</script>
+</body>
+</html>
