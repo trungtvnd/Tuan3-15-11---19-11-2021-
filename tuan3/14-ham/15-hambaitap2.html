@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-       #1{
-           border: 1px solid;
-           border-collapse: collapse;
-       }
+
        table{
            border: 1px solid;
            border-collapse: collapse;
@@ -20,7 +17,6 @@
 
        }
 
-
     </style>
 </head>
 <body>
@@ -30,36 +26,29 @@ STRATEGIES <label><select name="option" id="option" >
     <option value="foot" >Foot</option>
 </select></label>
 <hr>
-<p  style="width: 40px" oninput="check()"></p>
-<p  style="width: 40px" oninput="check()" ></p>
-<table>
-    <tr>
-        <td colspan="2"><b>Input</b></td>
+<p id="met"></p>
+<p id="feet"></p>
 
-        <td colspan="2"><b>Result</b></td>
-
-    </tr>
-    <tr id="1">
-        <td><label><input type="text" ></label></td>
-        <td id="input1"></td>
-        <td style="width: 160px"><p id="result"></p></td>
-        <td id="input2"></td>
-    </tr>
-</table>
 
 <script>
+    a = mettofeet()
+    document.getElementById('met').innerHTML = 'feet =' + a
+    b = feettomet()
+    document.getElementById('feet').innerText = 'Met =' + b
 
-    function check (){
-        let choice = document.getElementById('option').value
-        if (choice === 'meter') {
-            document.getElementById('input1').innerText = 'meter';
+function mettofeet(){
+        let met = prompt('Nhap vao met')
+    let feet
+    feet = 3.279 * met
+    return feet
+}
+function feettomet(){
+        let feet = +prompt("nhap vao feet")
+    let met
+    met = 0.305 * feet
+    return met
+}
 
-
-        }else if (choice === 'foot'){
-            document.getElementById('input2').innerText = 'foot';
-
-        }
-    }
 
 </script>
 </body>
