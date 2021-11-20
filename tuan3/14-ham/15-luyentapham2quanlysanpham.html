@@ -5,74 +5,25 @@
 ">
     <title>Title</title>
     <style>
-        table {
-            border: 1px solid;
-            border-collapse: collapse;
 
-        }
-
-        tr, td {
-            border: 1px solid;
-            border-collapse: collapse;
-            text-align: left;
-        }
 
     </style>
+    <link rel="stylesheet" href="15-luyentapham2quanlysanpham.css">
 </head>
-<body>
-
-
-<h2><b>CELL PHONE PRODUCT</b></h2>
-<label><input type="text" id="add"></label>
-<button style="height: 20px; width: 40px" onclick="add_item()">Add</button>
-<label><input type="text" id="edit"></label>
-<button style="height: 20px; width: 40px" onclick="edit_item()">Edit</button>
-
-<h3>List Product</h3>
-<p id="ds"><br></p>
-
+<body onload="display()">
+<h2><b>Add new Product</b></h2>
+<div id="id">
+    <label><input type="text" placeholder="product name" id="add"></label>
+    <button onclick="add()" >Add</button>
+    <label><input type="text"  id="edit"></label>
+    <button onclick="editProduct()" >Edit</button>
+</div>
+<div id="product"></div>
 
 <script>
 
-    let product = ['Sonny Xperia', 'Samsung Galaxy', 'Nokia 6 Xplus', 'Xiaomi 4', 'Iphone Apple X']
-
-    function table() {
-        let table = "<table>"
-        for (let i = 0; i < product.length; i++) {
-            table += ' <tr>\n' +
-                '<td >' + (i + 1) + '</td>\n' + '<td >' + product[i] + '</td>\n' + '<td><input type="button" onclick="edit_item(' + i + ')" value="edit"></td>\n' +
-                '<td><input type="button" onclick="delete_item(' + i + ')" value="delete"></td>\n'
-            table += '</tr>'
-        }
-        table += "</table>"
-        return table
-    }
-
-    document.getElementById("ds").innerHTML = table();
-
-
-    function add_item() {
-        let new_item = document.getElementById('add').value
-        product.push(new_item)
-        document.getElementById('ds').innerHTML = table()
-    }
-
-
-    function delete_item(i) {
-        product.splice(i, 1)
-        document.getElementById('ds').innerHTML = table()
-    }
-
-    let edit = document.getElementById('edit').value
-
-    function edit_item() {
-        product[i] = edit;
-        edit.attributeOldValue
-        document.getElementById('ds').innerHTML = table()
-    }
-    function sua(){
-
-    }
 </script>
+<script src="luyentapham2quanlysanpham.js"></script>
 </body>
+
 </html>

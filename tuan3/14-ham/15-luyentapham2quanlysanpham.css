@@ -1,0 +1,39 @@
+table{
+    width: 600px;
+}
+#name{
+    width: 50%;
+}
+button{
+    width: 70px;
+    border-radius: 5px;
+    height: 25px;
+    background-color: green;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #cce7e7;
+}
+td{
+    padding: 5px;
+}
+table,tr,td {
+    border-collapse: collapse;
+}
+#id{
+    background-color: #d5eeee;
+    padding: 15px;
+    width: 571px;
+    border-radius: 8px
+}
+#id2{
+    color: red;
+}
+input{
+    background-color: #d5eeee;
+    padding: 10px;
+    width: 150px;
+    border-radius: 8px;
+    height: 1px;
+
+}
