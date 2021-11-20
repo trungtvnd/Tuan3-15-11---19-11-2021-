@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Number 1: <input type="text" id="num1"></label>
+<label>Number 2: <input type="text" id="num2"></label>
+<button onclick="check()" value="ClickMe">ShowInfo</button>
+<script>
+
+    function check() {
+        a = +document.getElementById('num1').value
+        b = +document.getElementById('num2').value
+        let sum
+        if (a > b) {
+            alert(a > b)
+        }else {
+            sum = a + b
+            alert(sum)
+        }
+    }
+</script>
+</body>
+</html>

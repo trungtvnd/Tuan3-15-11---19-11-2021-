@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label><input type="text" id="input"></label>
+<button onclick="check()" value="ClickMe">ClickMe</button>
+<script>
+
+
+    function check() {
+        let flag = false
+        let a = document.getElementById('input').value
+        let star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+        let constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+        b = star.indexOf(a)
+        if (b !== -1) {
+            flag = true
+        }
+        if (flag) {
+            document.write(constellation[b])
+
+        } else {
+            document.write('Chung toi khong tim thay ngoi sao ban can')
+
+        }
+    }
+
+
+</script>
+</body>
+</html>
