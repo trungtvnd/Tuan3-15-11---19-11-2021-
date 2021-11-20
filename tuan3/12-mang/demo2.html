@@ -6,11 +6,16 @@
 </head>
 <body>
 <script>
-    let eng = ['table', 'girl', 'boy', 'love', 'baby']
-    if (eng.includes('table')) {
-        console.log(1)
+    function swap(a, b) {
+        let temp = a;
+        a = b;
+        b = temp;
     }
 
+    let a = 5;
+    let b = 10;
+    swap(a, b);
+    document.write("a = " + a + ", b = " + b);
 </script>
 </body>
 </html>

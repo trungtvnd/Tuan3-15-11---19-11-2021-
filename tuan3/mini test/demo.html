@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    array = [1,2,3,5,8,9,10]
+    a = swap(array)
+    console.log(a)
+
+    function swap(arr) {
+        let first = 0
+        let last = arr.length -1
+        let arrnew = []
+        while (first < last){
+            let temp = arr[first]
+            arr[first] = arr[last]
+            arr[last] = temp
+            first++
+            last--
+        }
+        arrnew = arr
+
+        return arrnew
+
+    }
+
+
+</script>
+</body>
+</html>

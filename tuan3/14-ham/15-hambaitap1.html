@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Cach 1
+
+// isPrime()
+
+//     function isPrime() {
+//         let flag = true
+//         for(let N = 2; N <= 1000;) {
+//             for (let i = 2; i <= Math.floor(Math.sqrt(N));){
+//                 if(N % i === 0) {
+//                     flag = false;
+//                     break
+//                 }
+//                 i++
+//             }if (flag) {
+//
+//                 console.log(N)
+//             }
+//             flag = true
+//             N++
+//         }
+//     }
+// console.log(N)
+
+    // Cach2
+   // a =  isPrime(3)
+   //  console.log(a)
+    function isPrime(num){
+        if (num < 2){
+            return false
+        }else {
+            for (let i = 2; i < Math.round(Math.sqrt(num)) ; i++) {
+                if(num % i === 0){
+                    return false
+                }
+
+            }
+        }
+        return true
+    }
+
+    for (let i = 0; i < 1000; i++) {
+        if(isPrime(i)){
+            console.log(i)
+        }
+
+    }
+
+</script>
+</body>
+</html>

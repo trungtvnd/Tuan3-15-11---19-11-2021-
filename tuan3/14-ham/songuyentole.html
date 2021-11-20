@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+
+
+    let flag = true
+    count_right = 0
+    count_wrong = 0
+
+    while (count_wrong <= 2) {
+        let N = +prompt('Input number N')
+        if (N <= 2) {
+            flag = false
+        }
+        for (let count = 1; count <= 5;) {
+            for (let i = 2; i < Math.floor(Math.sqrt(N));) {
+                if (N % i === 0) {
+                    flag = false;
+                }
+                if (flag) {
+                    console.log(N)
+                    count++
+                } else {
+                    count_wrong++
+                }
+                i++
+            }
+            flag = true
+
+        }
+        count_wrong++
+
+    }
+
+
+</script>
+</body>
+</html>

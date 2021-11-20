@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       #1{
+           border: 1px solid;
+           border-collapse: collapse;
+       }
+       table{
+           border: 1px solid;
+           border-collapse: collapse;
+           text-align: center;
+       }
+       tr,td{
+            border: 1px solid;
+           border-collapse: collapse;
+           width: 40px;
+
+       }
+
+
+    </style>
+</head>
+<body>
+<p>What do you want to input exchange (meter or foot) ?</p>
+STRATEGIES <label><select name="option" id="option" >
+    <option value="meter" >Meter</option>
+    <option value="foot" >Foot</option>
+</select></label>
+<hr>
+<p  style="width: 40px" oninput="check()"></p>
+<p  style="width: 40px" oninput="check()" ></p>
+<table>
+    <tr>
+        <td colspan="2"><b>Input</b></td>
+
+        <td colspan="2"><b>Result</b></td>
+
+    </tr>
+    <tr id="1">
+        <td><label><input type="text" ></label></td>
+        <td id="input1"></td>
+        <td style="width: 160px"><p id="result"></p></td>
+        <td id="input2"></td>
+    </tr>
+</table>
+
+<script>
+
+    function check (){
+        let choice = document.getElementById('option').value
+        if (choice === 'meter') {
+            document.getElementById('input1').innerText = 'meter';
+
+
+        }else if (choice === 'foot'){
+            document.getElementById('input2').innerText = 'foot';
+
+        }
+    }
+
+</script>
+</body>
+</html>
