@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        table {
+            position: relative;
+            margin: auto;
+        }
+
+        table, tr, td {
+            border: 1px solid #333;
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+<h1>Tic Tac Toe</h1>
+<script>
+    let a = +prompt('Nhập số ô caro');
+    let caro = new Array(a);
+    for (let i = 0; i < caro.length; i++) {
+        caro[i] = new Array(a);
+    }
+    let data = '<table>';
+    for (let i = 0; i < caro.length; i++) {
+        data = data + '<tr>';
+        for (let j = 0; j < caro[i].length; j++) {
+            caro[i][j] = '<td>' + " 0 " + '</td>';
+            data = data + caro[i][j];
+        }
+        data = data + '</tr>';
+    }
+    data = data + '</table>';
+    document.write(data)
+</script>
+</body>
+</html>
